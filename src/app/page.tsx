@@ -1,71 +1,82 @@
-import Image from "next/image";
 import Link from "next/link";
-import { Container } from "postcss";
 
-export default function Home() {
+const Menu = () => {
   return (
     <div>
-    <section className="font-serif text-left justify-center bg-slate-800 text-white">
-      <h1 className="text-5xl font-extrabold ml-16 py-4 ">Dream Bean Café</h1>
-      <img src="/coffee 1.jpeg" width={300} height={200} alt="coffee" className="px-4 py-4" />
-      <p className="text-2xl font-serif ml-16 mt-2 px-3">Welcome to Granduer, a cosy and modern cafe located in the heart of Paris.<br /><br />
-          We offer a wide range of coffee beans,<br />
-          from the most delicious to the most robust 
-          and a selection of coffees from around the world.
-          
-      </p>
-      <button className="text-white bg-orange-600 text-2xl font-serif mt-4 font-normal px-6 ml-10 border:rounded-lg py-1 mb-6 justify-center">
-        Contact Us
-      </button>
-    </section>
+      <section className="text-white text-center bg-slate-500 h-full py-4 px-4 sm:px-6 md:px-8 lg:px-16">
+        <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold py-4">Our Menu</h1>
+        <p className="text-base sm:text-lg md:text-2xl font-serif py-3">
+          Welcome to Dream Bean Cafe, where coffee is more than just a drink—it's an experience. Nestled in the heart of
+          Paris, we take pride in combining sophistication with a cozy atmosphere, ensuring every visit feels special.
+        </p>
 
-    <section className="font-serif text-right justify-center bg-slate-700 text-white py-12">
-      <h2 className="font-serif text-center font-bold text-3xl justify-center">WE BELIEVE IN COFFEE THAT TASTES <br /> INCREDIBLE</h2>
-      
-      <p className="font-serif text-center font-medium text-black text-2xl justify-center py-3">Every cup we brew reflect our passion for quality. using beans from the finest coffee farms. <br /> 
-      From rich espressos to smooth latters, we deliver a satisfying coffee experience perfect for <br />
-      jump-starting your day or relaxing with friends</p>
-      <img src="/hot-coffee.jpg" width={400} height={300} alt="latte coffee" className="px-4 py-4" />
-    </section>
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 py-8">
+          {/* Espresso Section */}
+          <div className="flex flex-col items-center md:flex-row md:items-start gap-4">
+            <img
+              src="/espresso.jpeg"
+              width={300}
+              height={300}
+              alt="espresso"
+              className="w-full md:w-60 lg:w-72 h-auto"
+            />
+            <div className="text-left">
+              <h2 className="font-bold text-xl sm:text-2xl md:text-2xl underline">Espressos</h2>
+              <p className="text-sm sm:text-base md:text-lg">A rich, strong coffee for a quick energy boost.</p>
+            </div>
+          </div>
 
-    <section className="text-3xl bg-slate-600  text-center text-white">
-        <button className="text-yellow-500 font-serif hover:underline  justify-center font-semibold py-3">Our Menu</button>
-        <br />
-          <p className="py-4">Explore our range of coffees and treats.</p>
-          <br />
-            <div className="font-serif text-3xl px-5">
-              <h2 className="font-bold text-left underline">Espressos</h2>
-              <p className="text-md text-left">A rich, strong coffee for a quick energy boost</p>
-              <img src="/espresso.jpeg" width={400} height={300} alt="espresso" className="px-4 py-4" />
-              </div>
+          {/* Cappuccino Section */}
+          <div className="flex flex-col items-center md:flex-row md:items-start gap-4">
+            <img
+              src="/cappuccino.jpeg"
+              width={300}
+              height={300}
+              alt="cappuccino"
+              className="w-full md:w-60 lg:w-72 h-auto"
+            />
+            <div className="text-left">
+              <h2 className="font-bold text-xl sm:text-2xl md:text-2xl underline">Cappuccino</h2>
+              <p className="text-sm sm:text-base md:text-lg">A smooth blend of coffee and frothy milk.</p>
+            </div>
+          </div>
 
-              <div className="font-serif text-3xl px-5 ">
-              <h2 className="font-bold text-left underline">Cappuccino</h2>
-              <p className="text-md text-left ">A smooth blend of coffee and frothy milk.</p>
-              <img src="/cappuccino.jpeg" width={400} height={300} alt="cappuccino" className="px-4 py-4" />
-              </div>
+          {/* Latte Section */}
+          <div className="flex flex-col items-center md:flex-row md:items-start gap-4">
+            <img
+              src="/latte coffee.jpeg"
+              width={300}
+              height={300}
+              alt="latte coffee"
+              className="w-full md:w-60 lg:w-72 h-auto"
+            />
+            <div className="text-left">
+              <h2 className="font-bold text-xl sm:text-2xl md:text-2xl underline">Latte</h2>
+              <p className="text-sm sm:text-base md:text-lg">Our signature latte with creamy milk and a touch of sweetness.</p>
+            </div>
+          </div>
 
-              <div className="font-serif text-3xl px-5 ">
-              <h2 className="font-bold text-left underline">Latte</h2>
-              <p className="text-md text-left ">Our signature latte with creamy milk and a touch of sweetness.</p>
-              <img src="/latte coffee.jpeg" width={400} height={300} alt="latte coffee" className="px-4 py-4" />
-              </div>
-
-              <div className="font-serif text-3xl px-5 ">
-              <h2 className="font-bold text-left underline">Black Coffee</h2>
-              <p className="text-md text-left ">Adventure in life is good; consistency in coffee even better..</p>
-              <img src="/black coffee.webp" width={400} height={300} alt="latte coffee" className="px-4 py-4" />
-              </div>
-                        
-    </section>
-
-    <section className="font-serif text-center justify-center bg-slate-500 text-white py-12"> 
-      <h1 className="font-bold text-4xl">Contact Us </h1> <br />
-      <p className="text-2xl">We would love to hear from you! Please fill out the form below to get in touch.</p>
-    </section>
-    
+          {/* Black Coffee Section */}
+          <div className="flex flex-col items-center md:flex-row md:items-start gap-4">
+            <img
+              src="/black coffee.webp"
+              width={300}
+              height={300}
+              alt="black coffee"
+              className="w-full md:w-60 lg:w-72 h-auto"
+            />
+            <div className="text-left">
+              <h2 className="font-bold text-xl sm:text-2xl md:text-2xl underline">Black Coffee</h2>
+              <p className="text-sm sm:text-base md:text-lg">Adventure in life is good; consistency in coffee even better.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+      <Link href="/" className="block text-blue-400 hover:underline mt-4 text-lg">
+        Back to Home
+      </Link>
     </div>
-
-    
   );
-}
+};
+
+export default Menu;
