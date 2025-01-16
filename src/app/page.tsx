@@ -19,9 +19,12 @@ export default function Home() {
           Welcome to Granduer, a cosy and modern cafe located in the heart of Paris.<br /><br />
           We offer a wide range of coffee beans, from the most delicious to the most robust and a selection of coffees from around the world.
         </p>
-        <button className="text-white bg-orange-600 text-lg sm:text-xl md:text-2xl font-serif mt-4 px-6 ml-4 sm:ml-10 md:ml-16 py-2 rounded-lg">
-          Contact Us
-        </button>
+        {/* Wrap button inside Link */}
+        <Link href="/contactus">
+          <button className="text-white bg-orange-600 text-lg sm:text-xl md:text-2xl font-serif mt-4 px-6 ml-4 sm:ml-10 md:ml-16 py-2 rounded-lg">
+            Contact Us
+          </button>
+        </Link>
       </section>
 
       {/* Section 2 - Belief */}
