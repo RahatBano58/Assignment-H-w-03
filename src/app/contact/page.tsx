@@ -39,7 +39,7 @@ const Contact = () => {
             <textarea
               id="message"
               name="message"
-              rows="5"
+              rows={5}
               placeholder="Type your message"
               className="p-2 rounded-md border-none w-full"
             ></textarea>
